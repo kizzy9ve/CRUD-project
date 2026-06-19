@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Meta: charset define que o arquivo usa caracteres portugueses (ç, ã, etc) -->
+  <meta charset="UTF-8">
+  <!-- Título que aparece na aba do navegador -->
+  <title>🎮 Game Hub - Login</title>
+  <!-- Conecta o arquivo CSS com estilos visuais -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Container principal da aplicação -->
+<div id="app">
+
+  <!-- ========== TELA DE LOGIN ========== -->
+  <!-- class="screen active" = esta tela fica visível no começo -->
+  <div id="login" class="screen active">
+    <div class="card">
+      <h1>🎮 Login</h1>
+
+      <!-- Input para o usuário digitar seu nome -->
+      <input id="loginUser" placeholder="Usuário">
+      <!-- Input para o usuário digitar sua senha (type="password" esconde os caracteres) -->
+      <input id="loginPass" type="password" placeholder="Senha">
+
+      <!-- Botão para fazer login (onclick="login()" chama a função no app.js) -->
+      <button onclick="login()">Entrar</button>
+      <!-- Botão fantasma para ir para registro (onclick="showRegister()" mostra outra tela) -->
+      <button class="ghost" onclick="showRegister()">Criar conta</button>
+
+      <!-- Parágrafo onde aparecem mensagens de erro (no app.js: msgLogin.innerText = "erro") -->
+      <p id="msgLogin"></p>
+    </div>
+  </div>
+
+  <!-- ========== TELA DE REGISTRO ========== -->
+  <!-- class="screen" = começa escondida (sem "active") -->
+  <div id="register" class="screen">
+    <div class="card">
+      <h1>📝 Cadastro</h1>
+
+      <!-- Input para digitar novo usuário -->
+      <input id="regUser" placeholder="Usuário">
+      <!-- Input para digitar nova senha -->
+      <input id="regPass" type="password" placeholder="Senha">
+
+      <!-- Botão para se registrar (onclick="register()" chama função no app.js) -->
+      <button onclick="register()">Cadastrar</button>
+      <!-- Botão para voltar ao login -->
+      <button class="ghost" onclick="showLogin()">Voltar</button>
+
+      <!-- Parágrafo para mostrar mensagens (sucesso ou erro) -->
+      <p id="msgRegister"></p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Conecta o arquivo JavaScript que controla o login/registro -->
+<script src="app.js"></script>
+</body>
+</html>
