@@ -1,0 +1,287 @@
+/* ===================================
+   ESTILOS GLOBAIS - Toda a página
+   =================================== */
+
+body {
+  /* Remove a margem padrão do navegador */
+  margin: 0;
+  /* Define a fonte para Arial */
+  font-family: Arial;
+  /* Cor de fundo escura (fundo preto) */
+  background: #0b0f1a;
+  /* Cor do texto branco */
+  color: white;
+}
+
+/* ===================================
+   TELAS - Login, Registro, Dashboard
+   =================================== */
+
+/* Classe .screen = cada "página" (login, registro, dashboard) */
+.screen {
+  /* display: none = começa invisível */
+  display: none;
+  /* height: 100vh = altura da janela inteira */
+  height: 100vh;
+  /* flexbox: centraliza o conteúdo horizontal e vertical */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Quando a tela tem classe "active" = fica visível */
+.screen.active {
+  /* display: flex = mostra e ativa flexbox */
+  display: flex;
+}
+
+/* ===================================
+   CARD - Caixa do login/registro
+   =================================== */
+
+.card {
+  /* Cor de fundo cinza escuro */
+  background: #151a2e;
+  /* Espaço interno de 25px */
+  padding: 25px;
+  /* Cantos arredondados */
+  border-radius: 12px;
+  /* Largura fixa */
+  width: 300px;
+  /* Flexbox: organiza elementos em coluna */
+  display: flex;
+  flex-direction: column;
+  /* Espaço entre elementos */
+  gap: 10px;
+}
+
+/* ===================================
+   INPUTS - Campos de texto
+   =================================== */
+
+input {
+  /* Espaço interno */
+  padding: 10px;
+  /* Cantos arredondados */
+  border-radius: 8px;
+  /* Sem borda */
+  border: none;
+  /* Remove o brilho padrão ao clicar */
+  outline: none;
+  /* Cor de fundo escura */
+  background: #0f1324;
+  /* Texto branco */
+  color: white;
+}
+
+/* ===================================
+   BOTÕES
+   =================================== */
+
+button {
+  /* Espaço interno */
+  padding: 10px;
+  /* Sem borda */
+  border: none;
+  /* Cantos arredondados */
+  border-radius: 8px;
+  /* Cor de fundo roxa */
+  background: #6c5ce7;
+  /* Texto branco */
+  color: white;
+  /* Muda o cursor para mão ao passar */
+  cursor: pointer;
+}
+
+/* Quando passa o mouse sobre o botão */
+button:hover {
+  /* Fica um pouco mais transparente (efeito visual) */
+  opacity: 0.9;
+}
+
+/* Classe .ghost = botão com fundo transparente e borda */
+.ghost {
+  /* Fundo transparente */
+  background: transparent;
+  /* Borda cinza escura */
+  border: 1px solid #444;
+}
+
+/* ===================================
+   BARRA DE TOPO (Topbar)
+   =================================== */
+
+.topbar {
+  /* position: fixed = fica no mesmo lugar ao fazer scroll */
+  position: fixed;
+  /* No topo da página */
+  top: 0;
+  /* Ocupa 100% da largura */
+  width: 100%;
+  /* Cor de fundo */
+  background: #151a2e;
+  /* Espaço interno */
+  padding: 10px;
+  /* Flexbox para alinhar título e botão sair */
+  display: flex;
+  justify-content: space-between; /* Um em cada lado */
+}
+
+/* ===================================
+   DASHBOARD - Layout do dashboard
+   =================================== */
+
+#dashboard {
+  /* Flexbox: organiza elementos em coluna */
+  display: flex;
+  flex-direction: column;
+  /* Espaço do topo (pois topbar é fixed) */
+  padding-top: 70px;
+  /* Centraliza horizontalmente */
+  align-items: center;
+}
+
+/* ===================================
+   SEÇÃO DE ADICIONAR
+   =================================== */
+
+.add {
+  /* Flexbox: coloca os inputs e botão lado a lado */
+  display: flex;
+  /* Espaço entre elementos */
+  gap: 10px;
+  /* Centraliza horizontalmente */
+  justify-content: center;
+  /* Espaço acima e abaixo */
+  margin: 20px 0;
+  /* flex-wrap: if não couber, vai pra próxima linha */
+  flex-wrap: wrap;
+  /* Ocupa toda a largura */
+  width: 100%;
+}
+
+/* ===================================
+   LISTA DE JOGOS
+   =================================== */
+
+#list {
+  /* Flexbox: coloca os itens em coluna */
+  display: flex;
+  flex-direction: column;
+  /* Centraliza os itens horizontalmente */
+  align-items: center;
+  /* Espaço entre itens */
+  gap: 10px;
+  /* Ocupa toda a largura */
+  width: 100%;
+  /* Espaço interno */
+  padding: 20px;
+}
+
+/* ===================================
+   ITEM - Cada jogo na lista
+   =================================== */
+
+.item {
+  /* Cor de fundo */
+  background: #1c2238;
+  /* Espaço interno */
+  padding: 15px;
+  /* Largura fixa */
+  width: 300px;
+  /* Cantos arredondados */
+  border-radius: 8px;
+  /* Flexbox para colocar texto e botões lado a lado */
+  display: flex;
+  justify-content: space-between; /* Um em cada lado */
+  align-items: center;
+}
+
+/* Texto do jogo (nome e plataforma) */
+.item-text {
+  /* Ocupa o espaço disponível */
+  flex: 1;
+}
+
+/* Container dos botões de editar/deletar */
+.item-actions {
+  /* Flexbox: coloca os botões lado a lado */
+  display: flex;
+  /* Espaço entre botões */
+  gap: 8px;
+}
+
+/* Botões dentro de .item-actions */
+.item-actions button {
+  /* Espaço interno menor */
+  padding: 6px 12px;
+  /* Texto menor */
+  font-size: 12px;
+  /* Largura automática (não preenche tudo) */
+  width: auto;
+}
+
+/* Botão Editar */
+.btn-edit {
+  /* Azul */
+  background: #0984e3;
+}
+
+/* Botão Deletar */
+.btn-delete {
+  /* Vermelho */
+  background: #d63031;
+}
+
+/* ===================================
+   MODAL - Janela de edição
+   =================================== */
+
+.modal {
+  /* Começa invisível */
+  display: none;
+  /* Posicionamento fixo: fica por cima de tudo */
+  position: fixed;
+  /* Cobre a tela toda */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Fundo semitransparente preto (deixa a página escura) */
+  background: rgba(0, 0, 0, 0.7);
+  /* Flexbox: centraliza o conteúdo */
+  justify-content: center;
+  align-items: center;
+  /* z-index: garante que fica por cima de tudo */
+  z-index: 1000;
+}
+
+/* Quando o modal tem classe "active" = fica visível */
+.modal.active {
+  /* display: flex = mostra */
+  display: flex;
+}
+
+/* Conteúdo do modal (a caixa com os inputs) */
+.modal-content {
+  /* Cor de fundo */
+  background: #151a2e;
+  /* Espaço interno */
+  padding: 25px;
+  /* Cantos arredondados */
+  border-radius: 12px;
+  /* Largura fixa */
+  width: 300px;
+  /* Flexbox: organiza elementos em coluna */
+  display: flex;
+  flex-direction: column;
+  /* Espaço entre elementos */
+  gap: 15px;
+}
+
+/* Container dos botões do modal */
+.modal-buttons {
+  /* Flexbox: coloca os botões lado a lado */
+  display: flex;
+  /* Espaço entre botões */
+  gap: 10px;
+}

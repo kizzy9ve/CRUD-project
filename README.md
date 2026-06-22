@@ -2,7 +2,7 @@
 
 Aplicação web para gerenciar sua biblioteca de jogos com login seguro.
 
-## 📋 Features
+### 📋 Features
 
 - ✅ **Autenticação segura** com criptografia bcrypt
 - ✅ **CRUD completo** para gerenciar jogos
